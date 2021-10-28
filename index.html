@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DarkMode Test</title>
+    <style>
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --text-color: #b6b6b6;
+          --background: #000000;
+        }
+        html {
+          filter: invert(1) hue-rotate(0.5turn);
+        }
+        img {
+          filter: invert(1) hue-rotate(0.5turn);
+        }
+      }
+
+      @media (prefers-color-scheme: light) {
+        :root {
+          --text-color: #1f1f1f;
+          --background: #ececec;
+        }
+      }
+
+      body {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        margin: 5px 10px;
+        background: var(--background);
+        color: var(--text-color);
+      }
+      img {
+        max-width: 100%;
+      }
+      .container {
+        display: block;
+      }
+      h1 {
+        margin: 20px auto 30px auto;
+        font-size: 2.5rem;
+      }
+      h2 {
+        font-size: 1.6rem;
+      }
+      p {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Nice Page</h1>
+      <section>
+        <h2>For testing dark more</h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere
+          laudantium quasi perspiciatis illo blanditiis, iusto porro nisi
+          laborum perferendis praesentium eveniet inventore harum, esse itaque
+          explicabo veniam ad voluptate eum.
+        </p>
+        <picture>
+          <source
+            srcset="30225631c7040d597f562a6eb406cb09.jpg"
+            media="(prefers-color-scheme: light)"
+          />
+          <img src="3829550.webp" />
+        </picture>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
+          dignissimos rem reprehenderit perspiciatis hic dolor sit asperiores
+          praesentium? Nesciunt maiores perferendis optio sint repellat hic
+          pariatur cupiditate eius earum asperiores?
+        </p>
+      </section>
+    </div>
+  </body>
+</html>
